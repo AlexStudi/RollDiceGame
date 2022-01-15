@@ -1,0 +1,51 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400&display=swap');
+
+body {
+    text-align:center /*All the elements in the project are center, so text-align is apply on body*/;
+    font-family: 'Lato', sans-serif;
+    color: #898989;
+    font-size: 1.3em;
+}
+
+.score {
+    background-color: #cd4d4c;
+}
+
+/*
+CHANGE SVG COLOR
+Source : https://qastack.fr/programming/22252472/how-to-change-the-color-of-an-svg-element
+Convert color to filter with https://codepen.io/sosuke/pen/Pjoqqp
+*/
+.filter-red {
+    filter: invert(75%) sepia(56%) saturate(6350%) hue-rotate(323deg) brightness(80%) contrast(102%);
+}
+
+.playerTitle{
+    font-size: 2.5em;
+    font-weight: 300;
+}
+
+.roundScoreTitle{
+    color: black;
+    font-weight: 300;
+}
+
+#globalScorePlayer1, #globalScorePlayer2{
+    font-size: 3.5em;
+    font-weight: 100;
+    color: #cd4d4c;
+}
+
+#roundScorePlayer1, #roundScorePlayer2{
+    font-size: 2em;
+    font-weight: 300;
+    color: white;
+}
+
+.iconSize{
+    height: 1.2em;
+}
+
+.background {
+    background: linear-gradient(to left, #ffffff 50%, #f7f7f7 50%);
+}
