@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400&display=swap'); /*Import font*/
 
 body {
     text-align:center /*All the elements in the project are center, so text-align is apply on body*/;
@@ -7,7 +7,7 @@ body {
     font-size: 1.3em;
 }
 
-/*Bouton*/
+/*Customised button*/
 .button {
     border: 0;
     line-height: 2.5;
@@ -18,6 +18,9 @@ body {
     border-radius: 5px;
     margin-top: 10px;
     margin-bottom: 10px;
+    max-width: 200px;
+    margin-left: auto;
+    margin-right: auto;
 }
 .button:hover {
     background-color:#898989;
@@ -27,9 +30,8 @@ body {
     background-color:#666666;
     color: white;
 }
-    
 
-
+/*Round score background color*/
 .score {
     background-color: #cd4d4c;
 }
@@ -45,7 +47,7 @@ Convert color to filter with https://codepen.io/sosuke/pen/Pjoqqp
 
 .playerTitle{
     font-size: 2.5em;
-    font-weight: 300;
+    font-weight: 100;
 }
 
 .roundScoreTitle{
@@ -69,10 +71,12 @@ Convert color to filter with https://codepen.io/sosuke/pen/Pjoqqp
     height: 1.2em;
 }
 
+/*Background if player 1 is playing*/
 .background1 {
     background: linear-gradient(to left, #ffffff 50%, #f7f7f7 50%);
 }
 
+/*Background if player 2 is playing*/
 .background2 {
     background: linear-gradient(to left, #f7f7f7 50%, #ffffff 50%);
 }
