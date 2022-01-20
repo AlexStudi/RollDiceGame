@@ -34,7 +34,9 @@ function setNextPlayer(SetPlayerIdActive) {
 
 // Function : Hide HOLD (When the score of the round is 0, no need to see the button HOLD)
 function hideHold() {
-  if(roundScore === 0) {$('#holdBt').hide()} else {$('#holdBt').show()}; // caché bouton hold si scoreRound = 0
+  if(roundScore === 0) {
+    $('#holdBt').hide()} 
+  else {$('#holdBt').show()} // caché bouton hold si scoreRound = 0
 }
 
 // Function : Update Active/Inactive player
@@ -68,7 +70,6 @@ $(() => { // Initial configuration
 // Click on "Roll dice"
 $(() => {
   $('#rollDice').click(function() {
-
     diceResult = getRandomArbitrary(1, 6); // Dice roll : Rounded random result between 1 & 6    
     let dicePicture = document.getElementById('diceScore'); 
     dicePicture.setAttribute('src', './images/dice-' + diceResult + '.svg'); // dice picture update
@@ -77,15 +78,17 @@ $(() => {
     if (diceResult === 1) {
         roundScore = 0; // The player loose, the round score become 0
         $(roundScorePlayer).html(roundScore); // Update of the round score on the screen (no need to update the global score)
-        setNextPlayer(playerIdActive) 
-        ActiveInactivePlayer() // Update of the active player
+        setNextPlayer(playerIdActive); 
+        $('#holdBt').hide();
+        ActiveInactivePlayer(); // Update of the active player
+        
       }
 
     // If dice result >1
     else{
-        roundScore = roundScore +  diceResult // Cumul round score
-        $(roundScorePlayer).html(roundScore) // Update of the round score on the screen
-        hideHold() // Hide the HOLD buton if not necessary
+        roundScore = roundScore + diceResult; // Cumul round score
+        $(roundScorePlayer).html(roundScore); // Update of the round score on the screen
+        hideHold(); // Hide the HOLD buton if not necessary
     }    
   })    
 });
